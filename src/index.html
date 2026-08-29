@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{SITE_NAME}}</title>
+  <meta name="description" content="{{SITE_DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{SITE_NAME}}">
+  <meta property="og:description" content="{{SITE_DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">{{JSON_LD}}</script>
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">{{SITE_NAME}}</a>
+    <button class="menu-toggle" type="button" data-drawer-toggle aria-controls="site-menu" aria-expanded="false">Menu</button>
+    <nav id="site-menu" class="site-nav" data-drawer aria-label="Primary navigation">{{NAV}}</nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">WEB FOUNDATION</p>
+      <h1>Build the new idea, not the same bugs.</h1>
+      <p>This starter keeps routing, validation, accessibility, search, storage, SEO, security, caching, and deployment checks reusable.</p>
+      <a class="button" href="/directory/">Open example directory</a>
+    </section>
+
+    <section aria-labelledby="principles-title">
+      <h2 id="principles-title">What stays consistent</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>One source of truth</h3>
+          <p>Brand, origin, navigation, route style, and shared behavior come from configuration.</p>
+        </article>
+        <article class="card">
+          <h3>Failures become tests</h3>
+          <p>Broken links, duplicate IDs, stale routes, missing metadata, and unsafe states fail verification.</p>
+        </article>
+        <article class="card">
+          <h3>JavaScript is enhancement</h3>
+          <p>Core content is present before scripts run, reducing blank-page and endless-loading failures.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a href="/contact/">Contact</a></footer>
+</body>
+</html>
