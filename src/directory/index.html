@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directory | {{SITE_NAME}}</title>
+  <meta name="description" content="A small example of reusable search and URL state.">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Directory | {{SITE_NAME}}">
+  <meta property="og:description" content="A small example of reusable search and URL state.">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">{{JSON_LD}}</script>
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">{{SITE_NAME}}</a>
+    <button class="menu-toggle" type="button" data-drawer-toggle aria-controls="site-menu" aria-expanded="false">Menu</button>
+    <nav id="site-menu" class="site-nav" data-drawer aria-label="Primary navigation">{{NAV}}</nav>
+  </header>
+
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">EXAMPLE DIRECTORY</p>
+      <h1>Search without rebuilding the same behavior.</h1>
+    </section>
+
+    <section class="directory" data-directory>
+      <label for="directory-search">Search</label>
+      <input id="directory-search" data-directory-search type="search" autocomplete="off" placeholder="Search items">
+      <p class="result-status" data-directory-status aria-live="polite">3 items</p>
+
+      <div class="cards" data-directory-list>
+        <article class="card" data-item data-search="analytics data sql">
+          <h2>Analytics</h2>
+          <p>Example structured record.</p>
+        </article>
+        <article class="card" data-item data-search="automation workflow api">
+          <h2>Automation</h2>
+          <p>Example structured record.</p>
+        </article>
+        <article class="card" data-item data-search="quality testing regression">
+          <h2>QA</h2>
+          <p>Example structured record.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a href="/contact/">Contact</a></footer>
+</body>
+</html>
