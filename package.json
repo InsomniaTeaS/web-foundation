@@ -1,0 +1,21 @@
+{
+  "name": "web-foundation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate:syntax": "node scripts/validate-syntax.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "validate:site": "node scripts/validate-site.mjs",
+    "validate:crawl": "node scripts/validate-crawl.mjs",
+    "validate:content": "node scripts/validate-content.mjs",
+    "validate": "npm run validate:syntax && npm run validate:data && npm run validate:site && npm run validate:crawl && npm run validate:content",
+    "verify": "npm run build && npm run validate",
+    "audit:live": "node scripts/audit-live.mjs",
+    "new:page": "node scripts/new-page.mjs"
+  }
+}
